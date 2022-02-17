@@ -21,7 +21,7 @@ In this project, i created the structure of a to-do list app.
   None
 
 - Technologies used
-  Use of webpack and ES6 syntax
+  Use of webpack and ES6 syntax.
 
 ## Live Demo (if available)
 
