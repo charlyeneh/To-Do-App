@@ -3,7 +3,7 @@
 
 # To-Do List App with Webpack
 
-![screenshot](./todo1.png)
+![screenshot](./src/todo1.png)
 
 > Description of the project.
 
