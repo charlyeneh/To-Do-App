@@ -25,6 +25,7 @@ In this project, i created the structure of a to-do list app.
 
 ## Live Demo (if available)
 
+[Live Demo Link](https://charlyeneh.github.io/To-Do-App/dist/)
 ## Getting Started
 
 Clone the Repo and power on the live-server to view the page or click on the live demo link.
