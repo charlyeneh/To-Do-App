@@ -12,10 +12,13 @@ body {
   box-shadow: 0 0 10px #888;
   padding: 0 20px;
 }
+
 .list-title {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: inherit;
+  margin: 0;
 }
 
 ul {
@@ -31,11 +34,6 @@ li {
   display: flex;
   flex-direction: column;
   align-content: center;
-}
-
-.list-title {
-  font-size: inherit;
-  margin: 0;
 }
 
 .add-input {
@@ -93,8 +91,7 @@ li {
   border: none;
 }
 
-
-.input{
+.input {
   outline: none;
   border: none;
   width: 100%;
