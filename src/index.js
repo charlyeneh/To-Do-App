@@ -1,59 +1,18 @@
-import './style.css';
+import ToDo from "./modules/todo.js";
+import addtoList from "./modules/addToUI.js";
+import add from "./modules/add.js";
+import deleteAllCompleted from "./modules/clearAll.js";
 
-class ToDoListClass {
-  constructor(description, completed, index) {
-    this.description = description;
-    this.completed = false;
-    this.index = index;
-  }
+// On Window load
+const list = JSON.parse(localStorage.getItem('todoList'));
+if (list) {
+  list.forEach((item) => new ToDo(item.description, item.complete));
 }
 
-const task = new ToDoListClass('Coming1', 'false', 1);
+// Add input event on todo
+const addInput = document.getElementById('add-input');
+addInput.addEventListener('keydown', add);
 
-const toDoStorage = [];
-
-const enterBTN = document.getElementById('enter');
-enterBTN.addEventListener('click', (e) => {
-const inputText = document.querySelector('.add-list').value;
-toDoStorage.push(inputText);
-  console.log(toDoStorage);
-});
-
-// toDoStorage.push(task.description);
-// console.log(toDoStorage);
-
-
-// const addToDo = () => {
-  // const inputText = document.querySelector('.add-list');
-  // console.log(inputText);
-  // if (inputText) {
-    // const toDo = new ToDoListClass(inputText, false, 1);
-    // console.log(toDo.description);
-    // toDoStorage.push(toDo.description);
-  // }
-// };
-// addToDo();
-
-// const enterBTN = document.getElementById('enter');
-// enterBTN.addEventListener('click', (e) => {
-// const inputText = document.querySelector('.add-list').value;
-//   console.log(inputText);
-// });
-
-
-// iterates over the array of objects
-// const toDoTasks = () => {
-//   toDoListArrays.sort((a, b) => a.index - b.index);
-//   toDoListArrays.forEach((toDoListArray) => {
-//     const div = document.createElement('div');
-//     div.classList.add('style-list');
-//     const display = document.querySelector('.list-items');
-//     div.innerHTML = `<input type="checkbox"> ${toDoListArray.description} <span><i class="fas fa-ellipsis-v"></i></span>`;
-//     display.appendChild(div);
-//   });
-// };
-// toDoTasks();
-
-// select input element
-
-// enter event
+const clearButton = document.getElementById('clear-btn');
+clearButton.addEventListener('click', deleteAllCompleted);
+addtoList();
