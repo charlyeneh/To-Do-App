@@ -36,6 +36,11 @@ span i {
 
 .add-list {
   opacity: 0.5;
+  outline: none;
+  width: 80%;
+  font-size: 1rem;
+  border: none;
+  padding: 0.5rem 0;
 }
 
 .list-reset {
