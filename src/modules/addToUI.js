@@ -1,4 +1,4 @@
-import ToDo from "./todo.js";
+import ToDo from './todo.js';
 // Add items to UI
 const addtoList = () => {
   const todoList = document.getElementById('todo-list');
@@ -32,7 +32,7 @@ const addtoList = () => {
       localStorage.setItem('todoList', JSON.stringify(ToDo.list));
     });
 
-        textInput.addEventListener('keydown', (e) => {
+    textInput.addEventListener('keydown', (e) => {
       text.innerHTML = textInput.value;
       const index = parseInt(listItem.id, 10);
       ToDo.list[index].description = text.innerHTML;
@@ -57,6 +57,6 @@ const addtoList = () => {
       text.classList = 'complete';
     }
   });
-}
+};
 
-    export default addtoList;
+export default addtoList;
