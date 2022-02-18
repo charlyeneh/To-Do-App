@@ -126,7 +126,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _mod
   \****************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\nfunction add(e) {\n  if (e.code === 'Enter') {\n    const newItem = new ToDo(this.value, false);\n    localStorage.setItem('todoList', JSON.stringify(newItem.getList()));\n    this.value = '';\n    addtoList();\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (add);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/add.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _addToUI_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./addToUI.js */ \"./src/modules/addToUI.js\");\n/* harmony import */ var _todo_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./todo.js */ \"./src/modules/todo.js\");\n\n\n\nfunction add(e) {\n  if (e.code === 'Enter') {\n    const newItem = new _todo_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"](this.value, false);\n    localStorage.setItem('todoList', JSON.stringify(newItem.getList()));\n    this.value = '';\n    (0,_addToUI_js__WEBPACK_IMPORTED_MODULE_0__[\"default\"])();\n  }\n}\n\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (add);\n\n\n//# sourceURL=webpack://webpack-demo/./src/modules/add.js?");
 
 /***/ }),
 
