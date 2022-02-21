@@ -12,7 +12,7 @@ const addtoList = () => {
     listItem.innerHTML = `
     <input class="checkbox" type="checkbox">
     <input type="text" class="input" value='${item.description}'>
-    <p class="text-area">${item.description}</p>
+    
     <button class="cancel-btn"><i class="fa fa-trash" aria-hidden="true"></i></button>
     `;
 
@@ -32,12 +32,12 @@ const addtoList = () => {
       localStorage.setItem('todoList', JSON.stringify(ToDo.list));
     });
 
-    textInput.addEventListener('keydown', (e) => {
-      text.innerHTML = textInput.value;
+    text.addEventListener('input', (e) => {
+      text.value = e.target.value;
       const index = parseInt(listItem.id, 10);
-      ToDo.list[index].description = text.innerHTML;
+      ToDo.list[index].description = e.target.value;
       localStorage.setItem('todoList', JSON.stringify(ToDo.list));
-      if (e.code === 'Enter') {
+      if (e.key === 'Enter') {
         text.style.display = 'block';
         textInput.classList.toggle('edit-item');
       }
