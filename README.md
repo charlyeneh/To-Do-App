@@ -1,4 +1,5 @@
-# To-Do List App
+# To-Do List App is a simple application that helps you keep track of your daily activities. Built with JavaScript.
+
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
 # To-Do List App with Webpack
